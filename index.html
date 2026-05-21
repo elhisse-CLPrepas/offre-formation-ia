@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Challenge 100 jours - Formation à l'Atelier LN-IA</title>
+  <meta name="description" content="Challenge 100 jours de l'Atelier LN-IA : formation-action pour pratiquer les Skills IA, l'orchestration et produire des livrables utiles. 20 candidats maximum.">
+  <meta property="og:title" content="Challenge 100 jours - Formation à l'Atelier LN-IA">
+  <meta property="og:description" content="100 jours pour pratiquer l'IA, formaliser des Skills IA, orchestrer des outils et produire des livrables publiables.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/affiche-challenge-100jours-ln-ia-completee.png">
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #5f6c7b;
+      --line: #dde4ec;
+      --paper: #fbfcfd;
+      --panel: #ffffff;
+      --navy: #102235;
+      --teal: #0f766e;
+      --gold: #c6902f;
+      --blue: #2563eb;
+      --soft: #eef5f7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(221, 228, 236, 0.9);
+      background: rgba(251, 252, 253, 0.92);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 14px 0;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0;
+      color: var(--navy);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 6px 12px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+      background: var(--panel);
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border: 1px solid #0b615a;
+      background: var(--teal);
+      color: #fff;
+      font-weight: 750;
+      text-decoration: none;
+      box-shadow: 0 10px 20px rgba(15, 118, 110, 0.18);
+    }
+
+    .cta.secondary {
+      border-color: var(--line);
+      background: #fff;
+      color: var(--navy);
+      box-shadow: none;
+    }
+
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(16, 34, 53, 0.96), rgba(15, 118, 110, 0.84)),
+        linear-gradient(45deg, rgba(198, 144, 47, 0.16), transparent 46%);
+      color: #fff;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(280px, 0.86fr);
+      gap: 36px;
+      align-items: center;
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 42px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      margin-bottom: 18px;
+      padding: 6px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #e9f6f4;
+      font-size: 0.9rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2.3rem, 5vw, 4.8rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 700px;
+      margin: 20px 0 0;
+      color: #e8f1f1;
+      font-size: clamp(1.05rem, 2vw, 1.26rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 30px;
+      max-width: 720px;
+    }
+
+    .hero-point {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      min-height: 76px;
+    }
+
+    .hero-point strong {
+      display: block;
+      font-size: 1.02rem;
+    }
+
+    .hero-point span {
+      display: block;
+      margin-top: 2px;
+      color: #d9e8e8;
+      font-size: 0.9rem;
+    }
+
+    .poster {
+      margin: 0;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+    }
+
+    .poster img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #0b1620;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 52px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(1.65rem, 3vw, 2.35rem);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 1.04rem;
+    }
+
+    p {
+      margin: 12px 0 0;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      background: var(--panel);
+    }
+
+    .card.accent {
+      border-color: rgba(15, 118, 110, 0.24);
+      background: linear-gradient(180deg, #fff, #f3faf9);
+    }
+
+    .list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .list li::before {
+      content: "";
+      flex: 0 0 8px;
+      width: 8px;
+      height: 8px;
+      margin-top: 9px;
+      background: var(--teal);
+    }
+
+    .phases {
+      counter-reset: phase;
+    }
+
+    .phase {
+      position: relative;
+      padding-left: 56px;
+    }
+
+    .phase::before {
+      counter-increment: phase;
+      content: counter(phase);
+      position: absolute;
+      left: 18px;
+      top: 20px;
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      background: var(--navy);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .band {
+      margin: 52px calc(50% - 50vw) 0;
+      padding: 42px calc(50vw - 50%);
+      background: var(--soft);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cta-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+      border: 1px solid rgba(16, 34, 53, 0.2);
+      border-radius: 8px;
+      padding: 28px;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .cta-panel h2 {
+      color: #fff;
+    }
+
+    .cta-panel p {
+      color: #d7e3ea;
+    }
+
+    footer {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 26px 0 42px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero-inner,
+      .grid.two,
+      .grid.three,
+      .cta-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        padding-top: 38px;
+      }
+
+      .hero-points {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-actions {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Navigation principale">
+      <div class="brand">Atelier LN-IA</div>
+      <div class="nav-actions">
+        <span class="pill">20 candidats maximum</span>
+        <a class="cta secondary" href="#programme">Programme</a>
+        <a class="cta" href="https://chat.whatsapp.com/LVnXAMyFOqt94f77e1VHjK">Rejoindre WhatsApp</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow">Démarrage prévu : lundi 1er juin 2026</span>
+        <h1>Challenge 100 jours - Formation à l'Atelier LN-IA</h1>
+        <p class="lead">Une formation-action pour pratiquer les Skills IA, orchestrer les outils modernes et produire des livrables utiles, documentés et partageables.</p>
+        <div class="hero-actions">
+          <a class="cta" href="https://chat.whatsapp.com/LVnXAMyFOqt94f77e1VHjK">Manifester mon intérêt</a>
+          <a class="cta secondary" href="#offre">Voir l'offre</a>
+        </div>
+        <div class="hero-points" aria-label="Points clés">
+          <div class="hero-point">
+            <strong>100 jours</strong>
+            <span>pour installer une pratique productive de l'IA</span>
+          </div>
+          <div class="hero-point">
+            <strong>20 places</strong>
+            <span>groupe limité, priorité aux Tiriens</span>
+          </div>
+          <div class="hero-point">
+            <strong>Livrables</strong>
+            <span>prompts, Skills IA, documents, pages et workflows</span>
+          </div>
+        </div>
+      </div>
+      <figure class="poster">
+        <img src="assets/affiche-challenge-100jours-ln-ia-completee.png" alt="Affiche complétée du Challenge 100 jours de l'Atelier LN-IA">
+      </figure>
+    </div>
+  </div>
+
+  <main>
+    <section id="offre">
+      <div class="section-head">
+        <h2>Une offre claire pour apprendre par la production</h2>
+        <p class="muted">L'objectif n'est pas seulement de comprendre l'IA. L'objectif est de pratiquer, produire, documenter et publier.</p>
+      </div>
+      <div class="grid two">
+        <div class="card accent">
+          <h3>Pourquoi ce challenge ?</h3>
+          <p>Beaucoup de personnes utilisent l'IA par essais rapides, sans méthode claire, sans livrable stable et sans progression visible. Ce challenge propose un cadre de travail pour transformer l'usage de l'IA en atelier de production.</p>
+        </div>
+        <div class="card">
+          <h3>Ce que l'on travaille</h3>
+          <ul class="list">
+            <li>clarifier un projet personnel ou professionnel ;</li>
+            <li>construire des prompts solides ;</li>
+            <li>formaliser des Skills IA réutilisables ;</li>
+            <li>orchestrer plusieurs outils ;</li>
+            <li>publier des preuves concrètes.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Pour qui ?</h2>
+        <p class="muted">Pour les personnes qui veulent passer d'un usage occasionnel de l'IA à une pratique professionnelle, structurée et productive.</p>
+      </div>
+      <div class="grid three">
+        <div class="card"><h3>Transmission</h3><p>Coachs, enseignants, formateurs et accompagnateurs.</p></div>
+        <div class="card"><h3>Organisation</h3><p>Managers, consultants, responsables d'équipe et profils projet.</p></div>
+        <div class="card"><h3>Création</h3><p>Entrepreneurs, ingénieurs, apprenants avancés et Tiriens prioritaires.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Livrables attendus</h2>
+        <p class="muted">Chaque participant avance avec un projet et construit progressivement un portefeuille de preuves.</p>
+      </div>
+      <div class="grid three">
+        <div class="card"><h3>Base de travail</h3><p>Fiche projet, espace de travail, prompt maître, bibliothèque de prompts.</p></div>
+        <div class="card"><h3>Production</h3><p>Skill IA personnel, guide PDF, support de présentation, fiche atelier ou page web.</p></div>
+        <div class="card"><h3>Publication</h3><p>Workflow reproductible, portfolio de preuves, page publique, plan d'amélioration.</p></div>
+      </div>
+    </section>
+
+    <section id="programme">
+      <div class="section-head">
+        <h2>Programme en 5 phases</h2>
+        <p class="muted">Une progression simple : cadrer, pratiquer, produire, publier, stabiliser.</p>
+      </div>
+      <div class="grid phases">
+        <div class="card phase">
+          <h3>Cadrage et installation</h3>
+          <p>Installer l'environnement de travail, clarifier le projet personnel et poser les premiers réflexes IA.</p>
+        </div>
+        <div class="card phase">
+          <h3>Skills IA et prompts</h3>
+          <p>Apprendre à formaliser des prompts et des Skills IA utiles, testables et réutilisables.</p>
+        </div>
+        <div class="card phase">
+          <h3>Production éditoriale augmentée</h3>
+          <p>Produire des documents structurés avec l'IA : guides, supports, fiches, pages et contenus de formation.</p>
+        </div>
+        <div class="card phase">
+          <h3>Publication et preuve</h3>
+          <p>Transformer les productions en livrables partageables : page publique, dépôt, QR code et fiche de présentation.</p>
+        </div>
+        <div class="card phase">
+          <h3>Stabilisation et autonomie</h3>
+          <p>Construire une méthode personnelle pour continuer à produire après le challenge.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Format et modalités</h2>
+        <p class="muted">Les modalités finales seront confirmées avec les candidats retenus selon leur motivation, leur disponibilité et leur projet.</p>
+      </div>
+      <div class="grid two">
+        <div class="card">
+          <h3>Cadre</h3>
+          <ul class="list">
+            <li>Durée : 100 jours.</li>
+            <li>Démarrage prévu : lundi 1er juin 2026.</li>
+            <li>Capacité : 20 candidats maximum.</li>
+            <li>Priorité : Tiriens.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Entrée dans le challenge</h3>
+          <ul class="list">
+            <li>Rejoindre le groupe WhatsApp.</li>
+            <li>Être contacté pour valider la motivation.</li>
+            <li>Clarifier le projet personnel.</li>
+            <li>Confirmer la disponibilité et l'engagement.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="band">
+      <div class="cta-panel">
+        <div>
+          <h2>Les places sont limitées à 20 candidats.</h2>
+          <p>Pour manifester votre intérêt, rejoignez le groupe WhatsApp. Les candidats intéressés seront ensuite contactés pour vérifier leur motivation, leur disponibilité et leur projet.</p>
+        </div>
+        <a class="cta" href="https://chat.whatsapp.com/LVnXAMyFOqt94f77e1VHjK">Rejoindre le groupe</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Challenge 100 jours - Formation à l'Atelier LN-IA. Page publique de présentation, version initiale.</p>
+  </footer>
+</body>
+</html>
