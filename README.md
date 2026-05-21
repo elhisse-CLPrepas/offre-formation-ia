@@ -2,6 +2,8 @@
 
 Ce dépôt contient la page publique partageable de l'offre Challenge 100 jours de l'Atelier LN-IA.
 
+Version enrichie : la page présente l'affiche, la promesse, les livrables, le programme en 5 phases, les priorités d'accès, la FAQ courte et l'appel à rejoindre le groupe WhatsApp.
+
 ## Fichiers
 
 - `index.html` : page publique prête pour GitHub Pages, placée à la racine du dépôt.

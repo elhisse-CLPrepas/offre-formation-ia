@@ -258,6 +258,60 @@
       background: linear-gradient(180deg, #fff, #f3faf9);
     }
 
+    .proof-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .proof-item {
+      border-left: 4px solid var(--gold);
+      padding: 14px 14px 14px 16px;
+      background: #fff;
+    }
+
+    .proof-item strong {
+      display: block;
+      color: var(--navy);
+    }
+
+    .proof-item span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .tiers {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .tier {
+      display: flex;
+      min-height: 188px;
+      flex-direction: column;
+      justify-content: space-between;
+      border-color: rgba(198, 144, 47, 0.38);
+      background: linear-gradient(180deg, #fffdf7, #ffffff);
+    }
+
+    .tier strong {
+      color: var(--gold);
+      font-size: 1.9rem;
+      line-height: 1;
+    }
+
+    .tier small {
+      color: var(--muted);
+      font-weight: 750;
+      text-transform: uppercase;
+    }
+
+    .faq {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .list {
       display: grid;
       gap: 10px;
@@ -346,6 +400,9 @@
       .hero-inner,
       .grid.two,
       .grid.three,
+      .proof-strip,
+      .tiers,
+      .faq,
       .cta-panel {
         grid-template-columns: 1fr;
       }
@@ -458,6 +515,12 @@
         <div class="card"><h3>Production</h3><p>Skill IA personnel, guide PDF, support de présentation, fiche atelier ou page web.</p></div>
         <div class="card"><h3>Publication</h3><p>Workflow reproductible, portfolio de preuves, page publique, plan d'amélioration.</p></div>
       </div>
+      <div class="proof-strip" aria-label="Preuves de sortie">
+        <div class="proof-item"><strong>1 projet cadré</strong><span>objectif, public, livrables et trajectoire.</span></div>
+        <div class="proof-item"><strong>1 méthode IA</strong><span>prompts, Skill personnel et workflow reproductible.</span></div>
+        <div class="proof-item"><strong>1 livrable publié</strong><span>page, document, support ou fiche partageable.</span></div>
+        <div class="proof-item"><strong>1 portfolio</strong><span>preuves de progression et plan d'amélioration.</span></div>
+      </div>
     </section>
 
     <section id="programme">
@@ -491,6 +554,35 @@
 
     <section>
       <div class="section-head">
+        <h2>Offres et priorités d'accès</h2>
+        <p class="muted">Les niveaux servent à organiser les priorités d'accès au groupe limité. Les conditions finales sont confirmées lors de l'entretien préalable.</p>
+      </div>
+      <div class="grid tiers">
+        <div class="card tier">
+          <div><small>Niveau 1</small><h3>Priorité premium</h3><p>Commission de pilotage du Club TIR.</p></div>
+          <strong>-50%</strong>
+        </div>
+        <div class="card tier">
+          <div><small>Niveau 2</small><h3>Club TIR</h3><p>Membres du Club TIR.</p></div>
+          <strong>-30%</strong>
+        </div>
+        <div class="card tier">
+          <div><small>Niveau 3</small><h3>Tiriens et communauté</h3><p>Tiriens TIR avec Mr Mimoun ou membres My-Community-IA.</p></div>
+          <strong>-20%</strong>
+        </div>
+        <div class="card tier">
+          <div><small>Niveau 4</small><h3>Premiers inscrits</h3><p>Hors TIR et hors My-Community-IA parmi les premiers inscrits.</p></div>
+          <strong>-10%</strong>
+        </div>
+        <div class="card tier">
+          <div><small>Niveau 5</small><h3>Inscription standard</h3><p>Candidats hors priorité ou après les places promotionnelles.</p></div>
+          <strong>Tarif normal</strong>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
         <h2>Format et modalités</h2>
         <p class="muted">Les modalités finales seront confirmées avec les candidats retenus selon leur motivation, leur disponibilité et leur projet.</p>
       </div>
@@ -512,6 +604,31 @@
             <li>Clarifier le projet personnel.</li>
             <li>Confirmer la disponibilité et l'engagement.</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Questions fréquentes</h2>
+        <p class="muted">Quelques repères pour décider rapidement si le challenge correspond à votre besoin.</p>
+      </div>
+      <div class="grid faq">
+        <div class="card">
+          <h3>Faut-il déjà maîtriser l'IA ?</h3>
+          <p>Non. Il faut surtout être prêt à pratiquer régulièrement, documenter son travail et produire des livrables concrets.</p>
+        </div>
+        <div class="card">
+          <h3>Pourquoi un entretien préalable ?</h3>
+          <p>Pour vérifier la motivation, clarifier le projet de départ et préserver la qualité du groupe limité.</p>
+        </div>
+        <div class="card">
+          <h3>Quel type de projet peut être travaillé ?</h3>
+          <p>Un support de formation, une page publique, un guide, un workflow, un portfolio ou tout livrable utile à votre activité.</p>
+        </div>
+        <div class="card">
+          <h3>Que signifie “apprendre en produisant” ?</h3>
+          <p>Chaque notion est reliée à une production : prompt, document, Skill IA, fiche, page ou preuve publiable.</p>
         </div>
       </div>
     </section>
