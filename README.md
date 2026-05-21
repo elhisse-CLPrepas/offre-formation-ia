@@ -7,7 +7,8 @@ Version enrichie : la page présente l'affiche, la promesse, les livrables, le p
 ## Fichiers
 
 - `index.html` : page publique prête pour GitHub Pages, placée à la racine du dépôt.
-- `assets/affiche-challenge-100jours-ln-ia-completee.png` : affiche complétée utilisée dans la page.
+- `assets/affiche-challenge-100jours-ln-ia-qr.png` : affiche complétée avec QR code utilisée dans la page.
+- `assets/affiche-challenge-100jours-ln-ia-completee.png` : affiche complétée conservée comme référence.
 - `assets/affiche-challenge-100jours-ln-ia.jpeg` : première affiche conservée comme référence.
 
 ## Publication GitHub Pages
