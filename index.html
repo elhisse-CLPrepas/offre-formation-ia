@@ -344,6 +344,28 @@
       padding-left: 56px;
     }
 
+    .phase ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .phase li + li {
+      margin-top: 4px;
+    }
+
+    .bonus {
+      margin-top: 18px;
+      border-color: rgba(198, 144, 47, 0.42);
+      background:
+        linear-gradient(135deg, rgba(255, 253, 247, 0.96), rgba(243, 250, 249, 0.96));
+    }
+
+    .bonus h3 {
+      color: #8a5f16;
+      font-size: 1.22rem;
+    }
+
     .phase::before {
       counter-increment: phase;
       content: counter(phase);
@@ -519,36 +541,71 @@
         <div class="proof-item"><strong>1 projet cadré</strong><span>objectif, public, livrables et trajectoire.</span></div>
         <div class="proof-item"><strong>1 méthode IA</strong><span>prompts, Skill personnel et workflow reproductible.</span></div>
         <div class="proof-item"><strong>1 livrable publié</strong><span>page, document, support ou fiche partageable.</span></div>
-        <div class="proof-item"><strong>1 portfolio</strong><span>preuves de progression et plan d'amélioration.</span></div>
+        <div class="proof-item"><strong>1 soutenance</strong><span>présentation finale du projet et preuves de progression.</span></div>
       </div>
     </section>
 
     <section id="programme">
       <div class="section-head">
         <h2>Programme en 5 phases</h2>
-        <p class="muted">Une progression simple : cadrer, pratiquer, produire, publier, stabiliser.</p>
+        <p class="muted">Une progression simple : cadrer, pratiquer, produire, publier, stabiliser, puis présenter son projet devant le groupe.</p>
       </div>
       <div class="grid phases">
         <div class="card phase">
           <h3>Cadrage et installation</h3>
-          <p>Installer l'environnement de travail, clarifier le projet personnel et poser les premiers réflexes IA.</p>
+          <p>Installer l'environnement de travail, clarifier l'objectif professionnel et transformer l'idée de départ en projet de production.</p>
+          <ul>
+            <li>fiche projet personnelle ;</li>
+            <li>objectif professionnel formulé ;</li>
+            <li>premier prompt maître et espace de travail.</li>
+          </ul>
         </div>
         <div class="card phase">
           <h3>Skills IA et prompts</h3>
-          <p>Apprendre à formaliser des prompts et des Skills IA utiles, testables et réutilisables.</p>
+          <p>Construire des prompts fiables et formaliser un Skill IA réutilisable pour soutenir le projet choisi.</p>
+          <ul>
+            <li>bibliothèque de prompts ;</li>
+            <li>Skill IA personnel ;</li>
+            <li>méthode de test et d'amélioration.</li>
+          </ul>
         </div>
         <div class="card phase">
           <h3>Production éditoriale augmentée</h3>
-          <p>Produire des documents structurés avec l'IA : guides, supports, fiches, pages et contenus de formation.</p>
+          <p>Passer de l'idée aux contenus structurés : documents, supports, fiches, pages et ressources utiles.</p>
+          <ul>
+            <li>guide ou support professionnel ;</li>
+            <li>page ou fiche de présentation ;</li>
+            <li>contenu prêt à relire, corriger et partager.</li>
+          </ul>
         </div>
         <div class="card phase">
           <h3>Publication et preuve</h3>
-          <p>Transformer les productions en livrables partageables : page publique, dépôt, QR code et fiche de présentation.</p>
+          <p>Transformer les productions en preuves visibles et partageables, avec une attention particulière à la clarté et à la crédibilité.</p>
+          <ul>
+            <li>livrable publié ou partageable ;</li>
+            <li>QR code, lien ou page publique ;</li>
+            <li>fiche de synthèse du projet.</li>
+          </ul>
         </div>
         <div class="card phase">
           <h3>Stabilisation et autonomie</h3>
-          <p>Construire une méthode personnelle pour continuer à produire après le challenge.</p>
+          <p>Stabiliser le workflow personnel pour continuer à produire après les 100 jours, avec un plan d'amélioration réaliste.</p>
+          <ul>
+            <li>workflow personnel documenté ;</li>
+            <li>portfolio de preuves ;</li>
+            <li>plan d'amélioration après la formation.</li>
+          </ul>
         </div>
+      </div>
+      <div class="card bonus">
+        <h3>Bonus final : soutenance du projet et attribution des prix</h3>
+        <p>À la fin de la formation, chaque participant prépare une courte soutenance autour de son projet de production lié à son objectif professionnel. La soutenance met en valeur le problème traité, la méthode IA utilisée, les livrables produits, les preuves de progression et les prochaines améliorations.</p>
+        <ul class="list">
+          <li>présentation finale du projet devant le groupe ;</li>
+          <li>mise en avant des livrables les plus utiles et les mieux documentés ;</li>
+          <li>retours constructifs pour améliorer le projet après le challenge ;</li>
+          <li>attribution de prix symboliques aux meilleurs projets selon la clarté, l'utilité, la qualité de production et la valeur professionnelle.</li>
+        </ul>
       </div>
     </section>
 
@@ -629,6 +686,14 @@
         <div class="card">
           <h3>Que signifie “apprendre en produisant” ?</h3>
           <p>Chaque notion est reliée à une production : prompt, document, Skill IA, fiche, page ou preuve publiable.</p>
+        </div>
+        <div class="card">
+          <h3>Y aura-t-il une présentation finale ?</h3>
+          <p>Oui. Une soutenance finale permet à chaque participant de présenter son projet, ses livrables et sa méthode de production.</p>
+        </div>
+        <div class="card">
+          <h3>Comment seront attribués les prix ?</h3>
+          <p>Les prix symboliques valorisent les meilleurs projets selon la clarté, l'utilité, la qualité des livrables et la progression démontrée.</p>
         </div>
       </div>
     </section>
