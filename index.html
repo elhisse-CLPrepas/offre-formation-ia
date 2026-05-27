@@ -59,9 +59,23 @@
     }
 
     .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       font-weight: 800;
       letter-spacing: 0;
       color: var(--navy);
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      display: block;
+      width: 118px;
+      height: auto;
+    }
+
+    .brand-name {
+      white-space: nowrap;
     }
 
     .nav-actions {
@@ -119,6 +133,21 @@
       width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
       padding: 56px 0 42px;
+    }
+
+    .hero-logo {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-logo img {
+      display: block;
+      width: min(260px, 58vw);
+      height: auto;
     }
 
     .eyebrow {
@@ -522,7 +551,10 @@
 <body>
   <header class="topbar">
     <nav class="nav" aria-label="Navigation principale">
-      <div class="brand">Atelier LN-IA</div>
+      <a class="brand" href="#" aria-label="Atelier LN-IA - Accueil">
+        <img class="brand-logo" src="assets/logo-LN-IA.png" alt="" aria-hidden="true">
+        <span class="brand-name">Atelier LN-IA</span>
+      </a>
       <div class="nav-actions">
         <span class="pill">20 candidats maximum</span>
         <a class="cta secondary" href="#programme">Programme</a>
@@ -534,6 +566,9 @@
   <div class="hero">
     <div class="hero-inner">
       <div>
+        <div class="hero-logo" aria-hidden="true">
+          <img src="assets/logo-LN-IA.png" alt="">
+        </div>
         <span class="eyebrow">Démarrage prévu : lundi 1er juin 2026</span>
         <h1>Challenge 100 jours - Formation à l'Atelier LN-IA</h1>
         <p class="lead">Une formation-action pour pratiquer les Skills IA, orchestrer les outils modernes et produire des livrables utiles, documentés et partageables.</p>
