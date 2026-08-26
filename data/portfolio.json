@@ -1,0 +1,61 @@
+﻿{
+  "version": "1.0",
+  "updated": "2026-08-26",
+  "portfolioUrl": "https://elhisse-clprepas.github.io/portfolio-formation-ia-ln-ia/",
+  "proofs": [
+    {
+      "id": "selection",
+      "title": "Sélectionner des preuves fortes",
+      "skill": "Analyser et prioriser",
+      "description": "Passer d’un inventaire de fichiers à une sélection courte, explicable et contrôlée.",
+      "image": "assets/images/portfolio/phase-02-selection-preuves-portfolio-ln-ia.webp",
+      "alt": "Sélection de dix preuves du portfolio LN-IA regroupées en quatre ensembles professionnels.",
+      "url": "https://elhisse-clprepas.github.io/portfolio-formation-ia-ln-ia/#selection"
+    },
+    {
+      "id": "competences",
+      "title": "Relier compétences et productions",
+      "skill": "Documenter la progression",
+      "description": "Associer chaque compétence annoncée à une production accessible et vérifiable.",
+      "image": "assets/images/portfolio/phase-03-matrice-competences-preuves-paysage-ln-ia.webp",
+      "alt": "Matrice reliant les dix preuves du portfolio aux huit compétences travaillées.",
+      "url": "https://elhisse-clprepas.github.io/portfolio-formation-ia-ln-ia/#selection"
+    },
+    {
+      "id": "progression",
+      "title": "Montrer un avant et un après",
+      "skill": "Tester et améliorer",
+      "description": "Rendre visibles les corrections qui transforment une première version en livrable documenté.",
+      "image": "assets/images/portfolio/phase-04-progression-avant-apres-v2-ln-ia.webp",
+      "alt": "Progression d’une PWA V1 vers une PWA V2 testée, corrigée et documentée.",
+      "url": "https://elhisse-clprepas.github.io/portfolio-formation-ia-ln-ia/#progression"
+    },
+    {
+      "id": "portfolio",
+      "title": "Construire un portfolio professionnel",
+      "skill": "Présenter avec méthode",
+      "description": "Organiser les productions en un récit professionnel clair, utile et démonstratif.",
+      "image": "assets/images/portfolio/phase-05-portfolio-professionnel-ln-ia.webp",
+      "alt": "Synthèse du portfolio professionnel LN-IA en quatre axes, dix preuves et huit compétences.",
+      "url": "https://elhisse-clprepas.github.io/portfolio-formation-ia-ln-ia/#productions"
+    },
+    {
+      "id": "controle",
+      "title": "Contrôler avant de valider",
+      "skill": "Assurer la qualité",
+      "description": "Distinguer ce qui est prévu, exécuté, contrôlé et réellement validé.",
+      "image": "assets/images/portfolio/phase-07-checklist-controle-s25-s26-ln-ia.webp",
+      "alt": "Checklist de contrôle des séances 25 et 26 avant validation du portfolio.",
+      "url": "https://elhisse-clprepas.github.io/portfolio-formation-ia-ln-ia/#controle"
+    },
+    {
+      "id": "publication",
+      "title": "Publier de façon contrôlée",
+      "skill": "Versionner et partager",
+      "description": "Préparer Git, protéger les sources et vérifier le résultat réellement publié.",
+      "image": "assets/images/portfolio/phase-09c-publication-github-pages-ln-ia.webp",
+      "alt": "Publication contrôlée du portfolio LN-IA sur GitHub Pages avec HTTPS et ressources vérifiées.",
+      "url": "https://elhisse-clprepas.github.io/portfolio-formation-ia-ln-ia/#publication"
+    }
+  ]
+}
