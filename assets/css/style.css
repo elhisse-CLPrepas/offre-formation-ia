@@ -199,3 +199,38 @@ h2{font-size:2rem}
 h1{font-size:2.2rem}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Badge de relance : relief 3D et reflet lumineux lent. */
+.relance-flash{
+  position:relative;isolation:isolate;display:flex;align-items:center;gap:14px;
+  width:fit-content;max-width:100%;overflow:hidden;margin:0 0 32px;
+  padding:16px 23px;border:1px solid #f0d28e;border-radius:10px;
+  background:linear-gradient(135deg,#294974 0%,#102952 42%,#091b3d 70%,#1c3d68 100%);
+  color:#fff9e9;font-size:clamp(.85rem,1.15vw,1rem);font-weight:800;
+  line-height:1.5;letter-spacing:.07em;text-transform:uppercase;
+  text-shadow:0 2px 1px #020d25;
+  box-shadow:inset 0 1px 0 #ffffff55,inset 0 -2px 0 #030e28,
+    0 2px 0 #c6a367,0 5px 0 #785c2b,0 8px 0 #102340,0 14px 23px #0b1f4626;
+  animation:relance-lift 5.5s ease-in-out infinite;
+}
+.relance-flash::after{
+  content:"";position:absolute;z-index:0;inset:-65% auto -65% -60%;width:34%;
+  background:linear-gradient(90deg,transparent,#fff4cc66,transparent);
+  transform:skewX(-22deg);opacity:0;pointer-events:none;
+  animation:relance-shine 5.5s ease-in-out infinite;
+}
+.relance-flash__trophy{position:relative;z-index:1;display:block;flex:0 0 44px;width:44px;height:44px;
+  filter:drop-shadow(0 2px 0 #704817) drop-shadow(0 5px 5px #020d2570)}
+.relance-flash__copy{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:0 .4em;min-width:0}
+.relance-flash__copy>span{white-space:nowrap}
+.relance-flash__season{color:#f4d58f}
+@keyframes relance-lift{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@keyframes relance-shine{0%,48%{left:-60%;opacity:0}55%{opacity:.8}78%{left:135%;opacity:0}100%{left:135%;opacity:0}}
+@media(max-width:760px){
+  .relance-flash{padding:13px 17px;gap:12px;margin-bottom:29px;font-size:.79rem;letter-spacing:.055em}
+  .relance-flash__trophy{flex-basis:36px;width:36px;height:36px}
+}
+@media(prefers-reduced-motion:reduce){
+  .relance-flash,.relance-flash::after{animation:none!important}
+  .relance-flash::after{display:none}
+}
