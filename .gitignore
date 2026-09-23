@@ -1,2 +1,35 @@
 # Copie locale accidentelle du logo canonique situé dans assets/
 /logo-LN-IA.png
+
+# Sources et documents de travail locaux, conservés hors publication
+/Affiche-00-de-la-pratique-au-portfolio.png
+/Affiche-01-apprendre-à-produire-avec-ia.png
+/Affiche-02-du-besoin-à-la-réalisation-vérifiée.png
+/Affiche-03-vous-pilotez-ia-vous-assiste.png
+/Affiche-04-des-productions-utiles-à-votre-activité.png
+/Affiche-05-votre-portfolio-montre-votre-progression.png
+/PROMPT-MAITRE-MISE-A-JOUR-OFFRE-LN-IA-SIX-AFFICHES-AUTOMNE-2026.md
+/assets/Affiche -invitation-challenge-100jours.png
+/assets/Affiche-metier-projet-porfolio.png
+/assets/images/affiche-invitation-challenge-100-jours-automne-2026.png
+/assets/images/affiche-metiers-projets-portfolio-ln-ia-automne-2026.png
+/assets/images/logo-ln-ia.png
+/assets/images/portfolio/phase-02-selection-preuves-portfolio-ln-ia.png
+/assets/images/portfolio/phase-03-matrice-competences-preuves-paysage-ln-ia.png
+/assets/images/portfolio/phase-04-progression-avant-apres-v2-ln-ia.png
+/assets/images/portfolio/phase-05-portfolio-professionnel-ln-ia.png
+/assets/images/portfolio/phase-07-checklist-controle-s25-s26-ln-ia.png
+/assets/images/portfolio/phase-09c-publication-github-pages-ln-ia.png
+/cinq-prompts-affiches-ln-ia-automne-2026-v1.md
+
+# Données privées et secrets — consignes LN-IA
+prive/
+*.xlsx
+*.csv
+*.db
+.env
+.env.*
+tokens.json
+credentials.json
+lead-data/
+exports-prives/

@@ -1,189 +1,60 @@
-﻿# Challenge 100 Jours — Offre Automne 2026
+# Challenge 100 Jours — Offre LN-IA, Automne 2026
 
-Page d’offre officielle du **Challenge 100 Jours — Formation IA pratique**, piloté par le Prof. Abderrahman El Hisse dans le cadre **LAB-NUMÉRIQUE-IA**.
+Page statique HTML/CSS/JavaScript du LAB-NUMÉRIQUE-IA.
+Pilotage : Prof. Abderrahman EL HISSE.
 
-> Apprendre en produisant. Produire avec méthode. Partager avec valeur. Avancer avec conscience.
+## État au 24 septembre 2026
+**V2 — VALIDÉ : contrôle visuel et mise à jour locale approuvés par le pilote le 24 septembre 2026. Non publiée.**
+Branche : `refonte-offre-six-affiches-automne-2026`.
+La page publique présente déjà la session d’automne ; la composition à six affiches reste locale.
 
-## Statut
+## Aperçu local
+http://127.0.0.1:8773/offre-formation-ia/
 
-La refonte Automne 2026 est préparée localement sur la branche :
-
-```text
-refonte-automne-2026
-```
-
-La page publique affiche encore la version de juin 2026. La nouvelle version n’est ni commitée, ni poussée, ni publiée.
-
-## Session Automne 2026
-
-- démarrage : vendredi 25 septembre 2026 ;
-- durée : environ 100 jours ;
-- progression : environ 14 semaines ;
-- volume : 28 séances ;
-- rythme : deux séances par semaine ;
-- lundi : comprendre et cadrer ;
-- vendredi : pratiquer, produire et corriger ;
-- modalité : 100 % en ligne ;
-- capacité : 20 participants maximum ;
-- validation : livrables, portfolio et soutenance.
-
-## Liens
-
-- Page d’offre : <https://elhisse-clprepas.github.io/offre-formation-ia/>
-- Portfolio de preuves : <https://elhisse-clprepas.github.io/portfolio-formation-ia-ln-ia/>
-- Preuves détaillées : <https://elhisse-clprepas.github.io/portfolio-formation-ia-ln-ia/preuves/>
-- My-Community-IA : <https://chat.whatsapp.com/L900Zbek15j3tBtkJnpKaI>
-
-## Architecture
-
-```text
-offre-formation-ia/
-├── index.html
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   └── images/
-│       ├── hero-automne-2026.webp
-│       ├── logo-ln-ia.webp
-│       ├── metiers-projets-portfolio-automne-2026.webp
-│       └── portfolio/
-│           └── six preuves WebP
-├── data/
-│   └── portfolio.json
-├── docs/
-│   ├── 01-diagnostic-offre-et-portfolio.md
-│   ├── 02-architecture-contenu.md
-│   ├── 03-matrice-liens.md
-│   ├── 04-checklist-publication.md
-│   ├── 05-rapport-final-production.md
-│   └── rapports des lots
-├── CHANGELOG.md
-└── README.md
-```
-
-## Page préparée
-
-La page locale comprend :
-
-1. un en-tête accessible ;
-2. un hero Automne 2026 ;
-3. l’explication des 100 jours ;
-4. les publics et besoins ;
-5. le format lundi/vendredi ;
-6. le programme en sept modules ;
-7. la méthode LN-IA ;
-8. les livrables ;
-9. six productions issues du portfolio ;
-10. les capacités acquises ;
-11. l’accompagnement et la validation ;
-12. les conditions et la candidature ;
-13. une FAQ ;
-14. un CTA final ;
-15. un pied de page.
-
-## Programme en sept modules
-
-1. Cadrage et prise de conscience ;
-2. Prompts et dialogue avec l’IA ;
-3. Documents professionnels ;
-4. Communication et supports visuels ;
-5. Pages web et présence numérique ;
-6. Organisation, workflows, Git/GitHub et documentation ;
-7. Portfolio final et validation.
-
-## Test local
-
-Depuis le dossier du dépôt :
-
+Si le serveur est arrêté, depuis le dossier parent :
 ```powershell
-python -m http.server 8765 --bind 127.0.0.1
+python -m http.server 8773 --bind 127.0.0.1 --directory C:\DEV\CHALLENGE-01-Juin-2026
 ```
+Pas de compilation, de backend ni d’installation. Le chemin teste le préfixe GitHub Pages.
 
-Puis ouvrir :
+## Contenu
+- Départ vendredi 25 septembre 2026 ; 100 jours, environ 14 semaines, 28 séances et 7 modules.
+- Deux séances par semaine, entièrement en ligne. Jours, horaires et conditions précisés lors de l’échange préalable.
+- Besoin réel, production, contrôle humain, corrections et portfolio.
+- Six affiches : accueil, méthode, accompagnement, livrables, portfolio et invitation.
+- Six liens documentaires du portfolio conservés.
+- Partage à l’initiative du visiteur, copie du lien et repli manuel.
+- Texte et liens utilisables sans JavaScript.
 
-```text
-http://127.0.0.1:8765/
-```
+Le nombre de places et les jours lundi/vendredi ne sont plus annoncés sans confirmation récente. Aucun abonnement payant inclus n’est promis.
 
-Ce test local ne constitue pas une publication GitHub Pages.
+## Fichiers utiles
+- `index.html` : contenu, ancres et métadonnées.
+- `assets/css/style.css` : présentation adaptative.
+- `assets/js/site.js` : copie du lien depuis le canonical.
+- `assets/images/affiche-00…05-*.webp` : dix-huit variantes.
+- `assets/images/partage-challenge-automne-2026.jpg` : carte sociale 1200 × 630.
+- `data/portfolio.json` : références existantes, conservées.
+- `docs/03-matrice-liens.md` : destinations et limites.
+- `docs/04-checklist-publication.md` : liste blanche actuelle de 27 fichiers, incluant .gitignore.
+- `docs/05-rapport-final-production.md` : rapport, mesures et captures.
 
-Points à vérifier :
+## Liens de référence
+- Offre : https://elhisse-clprepas.github.io/offre-formation-ia/
+- Portfolio : https://elhisse-clprepas.github.io/portfolio-formation-ia-ln-ia/
+- Communauté : https://chat.whatsapp.com/L900Zbek15j3tBtkJnpKaI
 
-- largeur 360 px ;
-- largeur 768 px ;
-- largeur 1440 px ;
-- navigation au clavier ;
-- focus visible ;
-- absence de défilement horizontal ;
-- cadrage des affiches ;
-- liens et ancres ;
-- console sans erreur.
+Le lien WhatsApp ouvre une communauté, sans envoyer un projet ni inscrire une personne.
+Ces URL sont centralisées dans le script de préparation archivé ; le HTML reste statique et les partages fonctionnent sans JavaScript.
 
-## Contrôles réalisés
+## Contrôles et sauvegardes
+Tests Edge Chromium à 360, 768, 1440 px : ressources, débordements, clavier, FAQ, agrandissement, copie, repli et mode sans JavaScript.
+Images principales : 2,02 Mo, soit environ 84 % de réduction par rapport aux PNG.
+Sauvegardes, scripts et captures : `../09-ARCHIVES/versions/offre-six-affiches-2026-09-24/`.
+Les anciens documents décrivent leurs dates respectives ; rapport et checklist actuels font référence pour cette mission.
 
-- page locale HTTP 200 ;
-- ressources locales cassées : 0 ;
-- ancres internes cassées : 0 ;
-- neuf WebP servis en HTTP 200 ;
-- six preuves dans `data/portfolio.json` ;
-- ancienne date, ancien WhatsApp et replays Drive absents ;
-- aucun chemin Windows, `file://` ou `localhost` dans le HTML ;
-- canonical et Open Graph présents ;
-- navigation mobile maintenue visible ;
-- réduction des images : 93,1 %.
-
-## Variables à compléter
-
-```text
-HEURE_LANCEMENT = A_VALIDER
-HEURE_SEANCE_VENDREDI = A_VALIDER
-LIEN_ENTRETIEN_15_MINUTES = A_COMPLETER
-CONTACT_WHATSAPP_DIRECT = A_COMPLETER
-TARIF_PLEIN = A_VALIDER
-REMISES_AUTOMNE_2026 = A_VALIDER
-DATE_FIN_INSCRIPTIONS = A_VALIDER
-```
-
-Tant que ces valeurs ne sont pas confirmées :
-
-- aucune heure précise n’est affichée ;
-- aucun CTA entretien n’est présenté ;
-- aucun ancien tarif ou remise n’est publié ;
-- la page indique que les conditions et tarifs sont communiqués lors de l’échange préalable.
-
-## Images
-
-La page active utilise neuf fichiers WebP optimisés, pour un poids total d’environ 1,15 Mo. Les PNG sources sont conservés localement mais exclus du futur commit.
-
-## Documentation
-
-- `docs/01-diagnostic-offre-et-portfolio.md` : diagnostic initial ;
-- `docs/02-architecture-contenu.md` : architecture éditoriale ;
-- `docs/03-matrice-liens.md` : navigation et état des liens ;
-- `docs/04-checklist-publication.md` : contrôles et liste blanche ;
-- `docs/05-rapport-final-production.md` : synthèse de la production locale.
-
-## Publication contrôlée
-
-La publication doit rester progressive :
-
-1. contrôler le diff local ;
-2. indexer uniquement la liste blanche validée ;
-3. contrôler l’index Git ;
-4. créer un commit seulement après autorisation ;
-5. pousser la branche seulement après autorisation ;
-6. fusionner vers `main` seulement après validation ;
-7. contrôler GitHub Pages et tous les liens publics.
-
-Ne pas utiliser `git add .` : l’indexation future devra lister explicitement les fichiers autorisés.
-
-## Gouvernance
-
-```text
-L’IA propose.
-L’humain contrôle.
-L’atelier organise.
-Le livrable prouve.
-```
-
-Le pilote humain conserve la décision finale sur les textes, les tarifs, le commit, le push, la fusion et la publication.
+## Publication
+Validation locale et autorisation d’indexation et de commit accordées par le pilote le 24 septembre 2026.
+La décision de push et de publication reste distincte ; aucun déploiement effectué.
+Suivre la checklist actuelle ; exclure PNG sources et documents de travail. Ne pas utiliser `git add .`.
+Avant une publication après le 25 septembre, vérifier la formulation du démarrage.
